@@ -1,103 +1,69 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
+/* =========================
+   AJUSTES TIPOGRAFÍA & AIRE
+   (no rompe estilos existentes)
+========================= */
 
+/* Texto base */
 body {
-  background: #000;
-  color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-/* CONTENEDOR */
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-  text-align: center;
+/* Títulos */
+h1, h2, h3 {
+    line-height: 1.3;
+    margin-bottom: 0.6em;
+    font-weight: 600;
 }
 
-/* HEADER */
-header {
-  padding: 80px 0;
-}
-
-header h1 {
-  font-size: 48px;
-  font-weight: 800;
-}
-
-.logo {
-  width: 70px;
-  margin: 18px auto;
-  display: block;
-}
-
-header p {
-  margin: 20px 0 30px;
-  font-size: 18px;
-  opacity: 0.85;
-}
-
-/* BOTONES */
-.btn {
-  display: inline-block;
-  padding: 14px 32px;
-  background: #fff;
-  color: #000;
-  text-decoration: none;
-  font-weight: 700;
-  border-radius: 30px;
-  margin: 5px;
-}
-
-/* SECCIONES */
-section {
-  padding: 80px 0;
+/* Jerarquía clara */
+h1 {
+    font-size: 2.2rem;
 }
 
 h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
+    font-size: 1.8rem;
 }
 
-/* CARDS */
-.cards {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
+h3 {
+    font-size: 1.3rem;
 }
 
-.card {
-  background: #111;
-  border-radius: 20px;
-  padding: 25px;
-  width: 300px;
+/* Párrafos más legibles */
+p {
+    margin-bottom: 1em;
+    max-width: 65ch;
 }
 
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 15px;
-  margin-bottom: 15px;
+/* =========================
+   ESPACIADO DE SECCIONES
+========================= */
+
+section {
+    padding: 4rem 1.5rem;
 }
 
-.card h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
+/* Aire correcto en mobile */
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 1.2rem;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
 }
 
-.card p {
-  font-size: 15px;
-  opacity: 0.85;
+/* Separación título / contenido */
+section h2 {
+    margin-bottom: 1.5rem;
 }
 
-/* FOOTER */
-footer {
-  padding: 30px 0;
-  font-size: 14px;
-  opacity: 0.6;
+/* Servicios (si usás bloques/cards) */
+.servicio {
+    margin-bottom: 2rem;
 }
