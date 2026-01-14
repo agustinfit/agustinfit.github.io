@@ -1,69 +1,213 @@
+
 /* =========================
-   AJUSTES TIPOGRAFÍA & AIRE
-   (no rompe estilos existentes)
+   RESET GENERAL
 ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
 
-/* Texto base */
+/* =========================
+   BODY – ESTILO NIKE
+========================= */
 body {
-    font-size: 16px;
-    line-height: 1.6;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: #000;
+  background: #000;
+  color: #fff;
+  letter-spacing: 0.5px;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.04) 2px,
+    transparent 2px,
+    transparent 40px
+  );
 }
 
-/* Títulos */
-h1, h2, h3 {
-    line-height: 1.3;
-    margin-bottom: 0.6em;
-    font-weight: 600;
+/* =========================
+   CONTENEDOR
+========================= */
+/* CONTENEDOR */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
 }
 
-/* Jerarquía clara */
-h1 {
-    font-size: 2.2rem;
+/* =========================
+   HEADER
+========================= */
+/* HEADER */
+header {
+  padding: 80px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+/* =========================
+   SECCIONES
+========================= */
+section {
+  padding: 80px 0;
+.logo {
+  width: 70px;
+  margin: 18px auto;
+  display: block;
+}
+
+/* =========================
+   TITULOS
+========================= */
+section h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  position: relative;
+header p {
+  margin: 20px 0 30px;
+  font-size: 18px;
+  opacity: 0.85;
+}
+
+section h2::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+/* BOTONES */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #fff;
+  display: block;
+  margin-top: 15px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 30px;
+  margin: 5px;
+}
+
+/* =========================
+   CARDS
+========================= */
+/* SECCIONES */
+section {
+  padding: 80px 0;
 }
 
 h2 {
-    font-size: 1.8rem;
+  font-size: 36px;
+  margin-bottom: 30px;
 }
 
-h3 {
-    font-size: 1.3rem;
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* Párrafos más legibles */
-p {
-    margin-bottom: 1em;
-    max-width: 65ch;
+.card {
+  background: #111;
+  padding: 35px 25px;
+  border-radius: 18px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.3s ease;
+  border-radius: 20px;
+  padding: 25px;
+  width: 300px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
 }
 
 /* =========================
-   ESPACIADO DE SECCIONES
+   IMÁGENES (CÍRCULO PERFECTO)
 ========================= */
-
-section {
-    padding: 4rem 1.5rem;
+.card img {
+  width: 140px;
+  height: 140px;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 25px;
+  display: block;
+  border: 3px solid rgba(255,255,255,0.3);
+  border-radius: 15px;
+  margin-bottom: 15px;
 }
 
-/* Aire correcto en mobile */
-@media (max-width: 768px) {
-    section {
-        padding: 3rem 1.2rem;
-    }
-
-    h1 {
-        font-size: 1.9rem;
-    }
-
-    h2 {
-        font-size: 1.6rem;
-    }
+/* =========================
+   TEXTO DE CARDS
+========================= */
+.card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
-/* Separación título / contenido */
-section h2 {
-    margin-bottom: 1.5rem;
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-size: 15px;
+  opacity: 0.85;
 }
 
-/* Servicios (si usás bloques/cards) */
-.servicio {
-    margin-bottom: 2rem;
+/* =========================
+   BOTONES
+========================= */
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 36px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* =========================
+   FOOTER
+========================= */
+/* FOOTER */
+footer {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  padding: 30px 0;
+  font-size: 14px;
+  opacity: 0.6;
 }
