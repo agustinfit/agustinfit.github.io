@@ -1,76 +1,95 @@
-/* === RESET BÁSICO === */
+/* =========================
+   RESET GENERAL
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* === FUENTE GENERAL === */
+/* =========================
+   BODY – ESTILO NIKE
+========================= */
 body {
   font-family: 'Montserrat', Arial, sans-serif;
   background-color: #000;
   color: #fff;
+  letter-spacing: 0.5px;
   background-image: repeating-linear-gradient(
     135deg,
-    rgba(255,255,255,0.03),
-    rgba(255,255,255,0.03) 2px,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.04) 2px,
     transparent 2px,
     transparent 40px
   );
 }
 
-/* === CONTENEDOR GENERAL === */
+/* =========================
+   CONTENEDOR
+========================= */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
 }
 
-/* === HEADER === */
+/* =========================
+   HEADER
+========================= */
 header {
-  padding: 60px 0;
+  padding: 80px 0;
   text-align: center;
 }
 
 header h1 {
-  font-size: 3rem;
-  letter-spacing: 3px;
+  font-size: 3.2rem;
+  font-weight: 900;
+  letter-spacing: 4px;
   text-transform: uppercase;
 }
 
-/* === SECCIONES === */
+/* =========================
+   SECCIONES
+========================= */
 section {
   padding: 80px 0;
 }
 
-/* === TITULOS === */
+/* =========================
+   TITULOS
+========================= */
 section h2 {
-  font-size: 2.2rem;
+  font-size: 2.6rem;
+  font-weight: 800;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   position: relative;
 }
 
 section h2::after {
   content: "";
-  width: 60px;
+  width: 70px;
   height: 4px;
   background: #fff;
   display: block;
   margin-top: 15px;
 }
 
-/* === CARDS === */
+/* =========================
+   CARDS
+========================= */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
 }
 
 .card {
   background: #111;
-  padding: 30px;
-  border-radius: 12px;
+  padding: 35px 25px;
+  border-radius: 18px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.08);
   transition: transform 0.3s ease;
 }
 
@@ -78,26 +97,48 @@ section h2::after {
   transform: translateY(-10px);
 }
 
-/* === IMÁGENES CIRCULARES === */
+/* =========================
+   IMÁGENES (CÍRCULO PERFECTO)
+========================= */
 .card img {
-  width: 180px;
-  height: 180px;
+  width: 140px;
+  height: 140px;
   object-fit: cover;
   border-radius: 50%;
+  margin: 0 auto 25px;
   display: block;
-  margin: 0 auto 20px;
+  border: 3px solid rgba(255,255,255,0.3);
 }
 
-/* === BOTONES === */
+/* =========================
+   TEXTO DE CARDS
+========================= */
+.card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* =========================
+   BOTONES
+========================= */
 .btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 14px 32px;
+  margin-top: 25px;
+  padding: 14px 36px;
   border: 2px solid #fff;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-weight: 700;
   transition: all 0.3s ease;
 }
 
@@ -106,7 +147,9 @@ section h2::after {
   color: #000;
 }
 
-/* === FOOTER === */
+/* =========================
+   FOOTER
+========================= */
 footer {
   padding: 40px 0;
   text-align: center;
