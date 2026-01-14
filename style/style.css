@@ -1,194 +1,115 @@
-/* BASE */
+/* === RESET BÁSICO === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === FUENTE GENERAL === */
 body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    color: white;
-    background-color: black;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255,255,255,0.03),
+    rgba(255,255,255,0.03) 2px,
+    transparent 2px,
+    transparent 40px
+  );
 }
 
-/* FONDO CON RAYAS */
-.background {
-    position: fixed;
-    inset: 0;
-    background: repeating-linear-gradient(
-        135deg,
-        rgba(255,255,255,0.05),
-        rgba(255,255,255,0.05) 2px,
-        transparent 2px,
-        transparent 20px
-    );
-    z-index: -1;
-}
-
-/* CONTENEDOR */
+/* === CONTENEDOR GENERAL === */
 .container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 60px 40px;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* TIPOGRAFÍA */
-h1, h2, h3 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
+/* === HEADER === */
+header {
+  padding: 60px 0;
+  text-align: center;
 }
 
-h1 {
-    font-size: 56px;
-    letter-spacing: 4px;
-    margin-bottom: 10px;
+header h1 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
-h2 {
-    font-size: 20px;
-    letter-spacing: 2px;
-    color: #aaa;
-    margin-bottom: 40px;
+/* === SECCIONES === */
+section {
+  padding: 80px 0;
 }
 
-.intro {
-    font-size: 18px;
-    max-width: 700px;
-    margin-bottom: 40px;
+/* === TITULOS === */
+section h2 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  position: relative;
 }
 
-/* BOTONES */
-.botones {
-    margin-bottom: 70px;
+section h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #fff;
+  display: block;
+  margin-top: 15px;
 }
 
-.btn-whatsapp,
-.btn-instagram {
-    display: inline-block;
-    padding: 15px 28px;
-    margin-right: 15px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    border-radius: 6px;
+/* === CARDS === */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
 }
 
-.btn-whatsapp {
-    background-color: #25D366;
+.card {
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
 }
 
-.btn-instagram {
-    background-color: #E1306C;
+.card:hover {
+  transform: translateY(-10px);
 }
 
-/* SECCIÓN CIRCULAR */
-.circle-section {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-top: 80px;
-    margin-bottom: 40px;
+/* === IMÁGENES CIRCULARES === */
+.card img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
 }
 
-.circle-section img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid rgba(255,255,255,0.15);
+/* === BOTONES === */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 32px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
 }
 
-.circle-section h3 {
-    font-size: 38px;
-    letter-spacing: 3px;
+.btn:hover {
+  background: #fff;
+  color: #000;
 }
 
-/* LISTA */
-ul {
-    list-style: square;
-    padding-left: 20px;
-    margin-bottom: 60px;
-}
-
-li {
-    margin-bottom: 10px;
-}
-/* =======================
-   VERSIÓN CELULAR
-======================= */
-@media (max-width: 768px) {
-
-    .container {
-        padding: 40px 20px;
-    }
-
-    h1 {
-        font-size: 40px;
-        letter-spacing: 2px;
-    }
-
-    h2 {
-        font-size: 16px;
-    }
-
-    .intro {
-        font-size: 16px;
-    }
-
-    .botones a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
-    .circle-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .circle-section img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .circle-section h3 {
-        margin-top: 20px;
-        font-size: 30px;
-    }
-}
-/* =======================
-   ANIMACIONES SUAVES
-======================= */
-
-/* Fade in general */
-.container {
-    animation: fadeIn 1s ease-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Hover botones */
-.btn-whatsapp,
-.btn-instagram {
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.btn-whatsapp:hover,
-.btn-instagram:hover {
-    transform: translateY(-3px);
-    opacity: 0.9;
-}
-
-/* Imagen circular */
-.circle-section img {
-    transition: transform 0.3s ease;
-}
-
-.circle-section img:hover {
-    transform: scale(1.05);
+/* === FOOTER === */
+footer {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
 }
