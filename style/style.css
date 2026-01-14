@@ -170,7 +170,7 @@ section h2 {
 }
 
 /* =========================
-   BOTONES
+   BOTONES BASE
 ========================= */
 .btn {
   display: inline-block;
@@ -190,6 +190,23 @@ section h2 {
   color: #000;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* =========================
+   BOTÓN WHATSAPP – CTA
+========================= */
+.btn.whatsapp {
+  background: linear-gradient(135deg, #25d366, #1ebe5d);
+  border: none;
+  color: #000;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  box-shadow: 0 15px 30px rgba(37, 211, 102, 0.35);
+}
+
+.btn.whatsapp:hover {
+  background: linear-gradient(135deg, #1ebe5d, #25d366);
+  box-shadow: 0 20px 40px rgba(37, 211, 102, 0.55);
 }
 
 /* =========================
