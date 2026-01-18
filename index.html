@@ -20,7 +20,7 @@
 <body>
 
   <!-- HEADER / HERO -->
-  <header class="hero">
+  <header class="hero reveal">
     <div class="container">
 
       <img src="images/logo.png" alt="Agustin Fit Logo" class="logo">
@@ -40,7 +40,7 @@
   </header>
 
   <!-- QUIÉN SOY -->
-  <section class="dark">
+  <section class="dark reveal">
     <div class="container">
       <h2>Quién soy</h2>
       <p class="lead">
@@ -55,13 +55,13 @@
   </section>
 
   <!-- SERVICIOS -->
-  <section>
+  <section class="reveal">
     <div class="container">
       <h2>Servicios</h2>
 
-      <div class="cards">
+      <div class="cards horizontal-scroll">
 
-        <div class="card">
+        <div class="card reveal">
           <img src="images/personal.jpg" alt="Fuerza y salud" class="service-img">
           <h3>Fuerza y Salud</h3>
           <p>
@@ -70,7 +70,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
           <img src="images/online.jpg" alt="Resistencia" class="service-img">
           <h3>Resistencia</h3>
           <p>
@@ -79,7 +79,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
           <img src="images/funcional2.jpg" alt="Rendimiento deportivo" class="service-img">
           <h3>Rendimiento Deportivo</h3>
           <p>
@@ -93,13 +93,13 @@
   </section>
 
   <!-- PLANES -->
-  <section class="dark">
+  <section class="dark reveal">
     <div class="container">
       <h2>Planes</h2>
 
       <div class="cards">
 
-        <div class="card">
+        <div class="card reveal">
           <h3>Plan Inicial</h3>
           <p>
             Ideal si estás empezando o querés retomar el entrenamiento.
@@ -114,7 +114,7 @@
           </a>
         </div>
 
-        <div class="card featured">
+        <div class="card featured reveal">
           <span class="badge">Más elegido</span>
           <h3>Plan Pro</h3>
           <p>
@@ -130,7 +130,7 @@
           </a>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
           <h3>Plan Rendimiento</h3>
           <p>
             Orientado a objetivos deportivos específicos.
@@ -150,7 +150,7 @@
   </section>
 
   <!-- CONTACTO -->
-  <section>
+  <section class="reveal">
     <div class="container">
       <h2>Contacto</h2>
       <p class="lead">
@@ -177,7 +177,21 @@
     <span>W</span>
   </a>
 
+  <!-- SCROLL ANIMATION SCRIPT -->
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(r => observer.observe(r));
+  </script>
+
 </body>
 </html>
-
 
