@@ -14,33 +14,40 @@
   <link rel="stylesheet" href="style/style.css">
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
+  <!-- HERO -->
+  <header class="hero">
     <div class="container">
-      <h1>Agustin Fit</h1>
       <img src="images/logo.png" alt="Agustin Fit Logo" class="logo">
-      <p>Entrená a tu ritmo. Resultados reales. Acompañamiento profesional.</p>
+
+      <h1>ENTRENÁ<br>CON MÉTODO</h1>
+
+      <p>
+        Fuerza. Salud. Rendimiento.<br>
+        Entrenamiento personalizado para personas reales.
+      </p>
 
       <a class="btn whatsapp" href="https://wa.me/5493513276853" target="_blank">
-        Quiero empezar
+        Empezar ahora
       </a>
     </div>
   </header>
 
   <!-- QUIÉN SOY -->
-  <section>
+  <section class="dark">
     <div class="container">
       <h2>Quién soy</h2>
-      <p>
+      <p class="lead">
         Soy Agustín, personal trainer y técnico superior en actividad física.
-        Trabajo con personas que quieren mejorar su fuerza, resistencia
-        y calidad de vida, sin importar la edad ni el nivel.
-        El entrenamiento se adapta a vos, no vos al entrenamiento.
+        Trabajo con personas que buscan entrenar mejor, no solamente entrenar más.
+      </p>
+      <p>
+        Cada plan está pensado para adaptarse a tu nivel, tu objetivo
+        y tu estilo de vida. Sin improvisar. Sin humo.
       </p>
     </div>
   </section>
@@ -53,28 +60,25 @@
       <div class="cards">
 
         <div class="card">
-          <img src="images/personal.jpg" alt="Fuerza y salud">
           <h3>Fuerza y Salud</h3>
           <p>
-            Programas progresivos para ganar fuerza, mejorar la postura
+            Programas progresivos para ganar fuerza, mejorar postura
             y cuidar la salud a largo plazo.
           </p>
         </div>
 
         <div class="card">
-          <img src="images/online.jpg" alt="Resistencia">
           <h3>Resistencia</h3>
           <p>
-            Entrenamientos orientados a mejorar tu capacidad aeróbica,
+            Entrenamientos orientados a mejorar capacidad aeróbica,
             energía diaria y rendimiento general.
           </p>
         </div>
 
         <div class="card">
-          <img src="images/funcional2.jpg" alt="Rendimiento deportivo">
           <h3>Rendimiento Deportivo</h3>
           <p>
-            Preparación física específica para mejorar el rendimiento
+            Preparación física específica para mejorar rendimiento
             y reducir el riesgo de lesiones.
           </p>
         </div>
@@ -84,7 +88,7 @@
   </section>
 
   <!-- PLANES -->
-  <section>
+  <section class="dark">
     <div class="container">
       <h2>Planes</h2>
 
@@ -93,26 +97,25 @@
         <div class="card">
           <h3>Plan Básico</h3>
           <p>
-            Ideal para quienes están empezando o quieren volver a entrenar
-            de forma segura y ordenada.
+            Para quienes quieren empezar de forma ordenada y segura.
           </p>
-          <p>
+          <p class="features">
             • Rutina personalizada<br>
-            • Adaptada a tu nivel<br>
-            • Seguimiento semanal
+            • Seguimiento semanal<br>
+            • Adaptado a tu nivel
           </p>
           <a class="btn whatsapp" href="https://wa.me/5493513276853" target="_blank">
             Consultar
           </a>
         </div>
 
-        <div class="card">
+        <div class="card featured">
+          <span class="badge">Más elegido</span>
           <h3>Plan Pro</h3>
           <p>
-            Para quienes buscan mejorar su físico y constancia
-            con un acompañamiento más cercano.
+            El plan más completo para lograr resultados reales.
           </p>
-          <p>
+          <p class="features">
             • Rutina personalizada<br>
             • Ajustes semanales<br>
             • Seguimiento continuo
@@ -125,13 +128,12 @@
         <div class="card">
           <h3>Plan Deportivo</h3>
           <p>
-            Orientado a personas activas o deportistas que buscan
-            mejorar rendimiento y prevenir lesiones.
+            Orientado a deportistas o personas activas.
           </p>
-          <p>
+          <p class="features">
             • Preparación física específica<br>
-            • Enfoque preventivo<br>
-            • Seguimiento personalizado
+            • Prevención de lesiones<br>
+            • Enfoque en rendimiento
           </p>
           <a class="btn whatsapp" href="https://wa.me/5493513276853" target="_blank">
             Hablar con Agustín
@@ -146,14 +148,12 @@
   <section>
     <div class="container">
       <h2>Contacto</h2>
-      <p>Escribime y vemos juntos cuál es el mejor plan para vos.</p>
+      <p class="lead">
+        Si querés entrenar en serio, hablemos.
+      </p>
 
       <a class="btn whatsapp" href="https://wa.me/5493513276853" target="_blank">
         WhatsApp
-      </a>
-
-      <a class="btn" href="https://instagram.com/agustin.fitt" target="_blank">
-        Instagram
       </a>
     </div>
   </section>
@@ -163,7 +163,7 @@
     <p>© 2026 Agustin Fit. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- WHATSAPP FLOTANTE -->
+  <!-- WHATSAPP FLOAT -->
   <a href="https://wa.me/5493513276853" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
     <svg viewBox="0 0 32 32">
       <path fill="white"
