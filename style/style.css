@@ -35,8 +35,8 @@ body {
 
 /* LOGO (MÁS GRANDE) */
 .logo {
-  width: 130px;
-  margin: 0 auto 35px;
+  width: 160px; /* 👈 MÁS GRANDE */
+  margin: 0 auto 40px;
   display: block;
 }
 
@@ -45,8 +45,7 @@ body {
   font-size: clamp(3rem, 6vw, 4.5rem);
   font-weight: 900;
   letter-spacing: 4px;
-  line-height: 1.1;
-  margin: 30px 0;
+  margin-bottom: 25px;
 }
 
 .hero p {
@@ -73,20 +72,18 @@ h2 {
 
 .lead {
   font-size: 1.1rem;
-  opacity: 0.9;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 /* BUTTONS */
 .btn {
-  display: inline-block;
   padding: 16px 38px;
   border: 2px solid #fff;
   color: #fff;
   text-decoration: none;
   font-weight: 800;
   letter-spacing: 2px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .btn:hover {
@@ -107,64 +104,42 @@ h2 {
 /* CARDS */
 .cards {
   display: flex;
-  gap: 35px;
+  gap: 40px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .card {
+  width: 300px;
   background: #111;
   border: 1px solid rgba(255,255,255,0.1);
-  padding: 40px 30px;
-  width: 300px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 40px 25px;
+  transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-12px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
-/* IMÁGENES CIRCULARES */
-.card-img {
+/* 🔥 IMÁGENES CIRCULARES CORRECTAS */
+.service-img {
   width: 120px;
   height: 120px;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 20px;
-  border: 3px solid rgba(255,255,255,0.15);
+  display: block;
+  margin: 0 auto 20px;
+  border: 3px solid rgba(255,255,255,0.2);
 }
 
 .card h3 {
-  font-size: 1.4rem;
   margin-bottom: 15px;
+  font-size: 1.3rem;
 }
 
 .card p {
   font-size: 0.95rem;
   opacity: 0.85;
-}
-
-/* FEATURES */
-.features {
-  margin: 20px 0 30px;
-}
-
-/* FEATURED */
-.card.featured {
-  border: 2px solid #25d366;
-  transform: scale(1.05);
-}
-
-.badge {
-  display: inline-block;
-  margin-bottom: 15px;
-  padding: 6px 14px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  background: #25d366;
-  color: #000;
 }
 
 /* FOOTER */
@@ -179,39 +154,27 @@ footer {
   position: fixed;
   bottom: 22px;
   right: 22px;
-  width: 58px;
-  height: 58px;
+  width: 56px;
+  height: 56px;
   background: #25d366;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #000;
+  font-weight: 900;
+  text-decoration: none;
   z-index: 1000;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.15);
-}
-
-.whatsapp-float svg {
-  width: 26px;
-  height: 26px;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
+  .logo {
+    width: 140px;
+  }
+
   section {
     padding: 80px 0;
-  }
-
-  .logo {
-    width: 110px;
-  }
-
-  .card.featured {
-    transform: none;
   }
 }
 
