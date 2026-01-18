@@ -123,7 +123,7 @@ h2 {
   transform: translateY(-12px);
 }
 
-/* IMÁGENES CIRCULARES */
+/* IMÁGENES */
 .service-img {
   width: 120px;
   height: 120px;
@@ -190,8 +190,21 @@ footer {
   z-index: 1000;
 }
 
+/* SCROLL ANIMATIONS */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
+
   .logo {
     width: 150px;
   }
@@ -203,5 +216,23 @@ footer {
   .card.featured {
     transform: none;
   }
+
+  /* SERVICIOS SLIDER */
+  .horizontal-scroll {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+
+  .horizontal-scroll .card {
+    min-width: 80%;
+    scroll-snap-align: center;
+  }
+
+  .horizontal-scroll::-webkit-scrollbar {
+    display: none;
+  }
 }
+
 
