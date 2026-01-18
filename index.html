@@ -19,20 +19,20 @@
 
 <body>
 
-  <!-- HEADER / HERO -->
-  <header class="hero reveal">
+  <!-- HERO -->
+  <header class="hero section-reveal">
     <div class="container">
 
       <img src="images/logo.png" alt="Agustin Fit Logo" class="logo">
 
-      <h1>ENTRENÁ<br>CON MÉTODO</h1>
+      <h1 class="reveal-title">ENTRENÁ<br>CON MÉTODO</h1>
 
-      <p>
+      <p class="reveal-item">
         Fuerza. Salud. Rendimiento.<br>
         Entrenamiento personalizado para personas reales.
       </p>
 
-      <a class="btn whatsapp" href="https://wa.me/5493513276853" target="_blank">
+      <a class="btn whatsapp reveal-item" href="https://wa.me/5493513276853" target="_blank">
         Quiero empezar
       </a>
 
@@ -40,13 +40,15 @@
   </header>
 
   <!-- QUIÉN SOY -->
-  <section class="dark reveal">
+  <section class="dark section-reveal">
     <div class="container">
-      <h2>Quién soy</h2>
-      <p class="lead">
+      <h2 class="reveal-title">Quién soy</h2>
+
+      <p class="lead reveal-item">
         Soy Agustín, personal trainer y técnico superior en actividad física.
       </p>
-      <p>
+
+      <p class="reveal-item">
         Trabajo con personas que quieren mejorar su fuerza, su resistencia
         y su calidad de vida, sin importar la edad ni el nivel.
         El entrenamiento se adapta a vos, no vos al entrenamiento.
@@ -55,13 +57,13 @@
   </section>
 
   <!-- SERVICIOS -->
-  <section class="reveal">
+  <section class="section-reveal">
     <div class="container">
-      <h2>Servicios</h2>
+      <h2 class="reveal-title">Servicios</h2>
 
       <div class="cards horizontal-scroll">
 
-        <div class="card reveal">
+        <div class="card reveal-item">
           <img src="images/personal.jpg" alt="Fuerza y salud" class="service-img">
           <h3>Fuerza y Salud</h3>
           <p>
@@ -70,7 +72,7 @@
           </p>
         </div>
 
-        <div class="card reveal">
+        <div class="card reveal-item">
           <img src="images/online.jpg" alt="Resistencia" class="service-img">
           <h3>Resistencia</h3>
           <p>
@@ -79,7 +81,7 @@
           </p>
         </div>
 
-        <div class="card reveal">
+        <div class="card reveal-item">
           <img src="images/funcional2.jpg" alt="Rendimiento deportivo" class="service-img">
           <h3>Rendimiento Deportivo</h3>
           <p>
@@ -89,17 +91,25 @@
         </div>
 
       </div>
+
+      <!-- INDICADOR -->
+      <div class="slider-indicator">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
     </div>
   </section>
 
   <!-- PLANES -->
-  <section class="dark reveal">
+  <section class="dark section-reveal">
     <div class="container">
-      <h2>Planes</h2>
+      <h2 class="reveal-title">Planes</h2>
 
       <div class="cards">
 
-        <div class="card reveal">
+        <div class="card reveal-item">
           <h3>Plan Inicial</h3>
           <p>
             Ideal si estás empezando o querés retomar el entrenamiento.
@@ -114,7 +124,7 @@
           </a>
         </div>
 
-        <div class="card featured reveal">
+        <div class="card featured reveal-item">
           <span class="badge">Más elegido</span>
           <h3>Plan Pro</h3>
           <p>
@@ -130,7 +140,7 @@
           </a>
         </div>
 
-        <div class="card reveal">
+        <div class="card reveal-item">
           <h3>Plan Rendimiento</h3>
           <p>
             Orientado a objetivos deportivos específicos.
@@ -150,18 +160,19 @@
   </section>
 
   <!-- CONTACTO -->
-  <section class="reveal">
+  <section class="section-reveal">
     <div class="container">
-      <h2>Contacto</h2>
-      <p class="lead">
+      <h2 class="reveal-title">Contacto</h2>
+
+      <p class="lead reveal-item">
         Escribime y vemos juntos cuál es el mejor plan para vos.
       </p>
 
-      <a class="btn whatsapp" href="https://wa.me/5493513276853" target="_blank">
+      <a class="btn whatsapp reveal-item" href="https://wa.me/5493513276853" target="_blank">
         WhatsApp
       </a>
 
-      <a class="btn" href="https://instagram.com/agustin.fitt" target="_blank">
+      <a class="btn reveal-item" href="https://instagram.com/agustin.fitt" target="_blank">
         Instagram
       </a>
     </div>
@@ -177,21 +188,21 @@
     <span>W</span>
   </a>
 
-  <!-- SCROLL ANIMATION SCRIPT -->
+  <!-- ANIMACIONES -->
   <script>
-    const reveals = document.querySelectorAll('.reveal');
+    const sections = document.querySelectorAll('.section-reveal');
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
+          observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.2 });
 
-    reveals.forEach(r => observer.observe(r));
+    sections.forEach(section => observer.observe(section));
   </script>
 
 </body>
 </html>
-
