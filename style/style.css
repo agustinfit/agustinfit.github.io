@@ -10,11 +10,11 @@
 body {
   background: #000;
   color: #fff;
-  letter-spacing: 0.5px;
+  line-height: 1.6;
   background-image: linear-gradient(
     135deg,
-    rgba(255,255,255,0.08),
-    rgba(255,255,255,0.02)
+    rgba(255,255,255,0.06),
+    transparent 60%
   );
 }
 
@@ -28,24 +28,26 @@ body {
 
 /* HEADER */
 header {
-  padding: 90px 0;
+  padding: 90px 0 70px;
 }
 
 header h1 {
   font-size: 3rem;
   font-weight: 800;
-  letter-spacing: 3px;
-}
-
-header p {
-  margin: 20px 0;
-  opacity: 0.85;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 .logo {
-  width: 70px;
-  margin: 20px auto;
+  width: 80px;
+  margin: 25px auto;
   display: block;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: 30px;
 }
 
 /* SECTIONS */
@@ -55,20 +57,22 @@ section {
 
 section h2 {
   font-size: 2.2rem;
-  margin-bottom: 40px;
+  font-weight: 800;
+  margin-bottom: 30px;
   text-transform: uppercase;
 }
 
 /* BUTTONS */
 .btn {
   display: inline-block;
-  margin: 10px;
   padding: 14px 34px;
   border: 2px solid #fff;
   color: #fff;
   text-decoration: none;
   font-weight: 700;
+  letter-spacing: 2px;
   transition: all 0.3s ease;
+  margin: 8px;
 }
 
 .btn:hover {
@@ -76,12 +80,12 @@ section h2 {
   color: #000;
 }
 
-.whatsapp {
+.btn.whatsapp {
   border-color: #25d366;
   color: #25d366;
 }
 
-.whatsapp:hover {
+.btn.whatsapp:hover {
   background: #25d366;
   color: #000;
 }
@@ -90,16 +94,16 @@ section h2 {
 .cards {
   display: flex;
   gap: 30px;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card {
   background: #111;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
   padding: 30px 25px;
   width: 300px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.08);
   transition: transform 0.3s ease;
 }
 
@@ -123,12 +127,11 @@ section h2 {
 .card p {
   font-size: 0.95rem;
   opacity: 0.85;
-  line-height: 1.6;
 }
 
 /* FOOTER */
 footer {
-  padding: 30px 0;
+  padding: 35px 0;
   font-size: 0.85rem;
   opacity: 0.6;
 }
@@ -136,26 +139,27 @@ footer {
 /* WHATSAPP FLOAT */
 .whatsapp-float {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 56px;
-  height: 56px;
+  bottom: 20px;
+  right: 20px;
+  width: 58px;
+  height: 58px;
   background: #25d366;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
   z-index: 1000;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
   transition: transform 0.3s ease;
-}
-
-.whatsapp-float img {
-  width: 28px;
 }
 
 .whatsapp-float:hover {
   transform: scale(1.1);
+}
+
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
 }
 
 /* MOBILE */
@@ -164,56 +168,12 @@ footer {
     font-size: 2.4rem;
   }
 
-  section {
-    padding: 60px 0;
+  section h2 {
+    font-size: 1.8rem;
   }
 
-  .whatsapp-float {
-    width: 50px;
-    height: 50px;
-    bottom: 20px;
-    right: 20px;
-  }
-
-  .whatsapp-float img {
-    width: 24px;
-  }
-}
-/* =========================
-   WHATSAPP FLOTANTE
-========================= */
-.whatsapp-float {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 56px;
-  height: 56px;
-  background: #25d366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-  z-index: 9999;
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .whatsapp-float {
-    width: 50px;
-    height: 50px;
-    bottom: 20px;
-    right: 20px;
-  }
-
-  .whatsapp-float svg {
-    width: 24px;
-    height: 24px;
+  .card {
+    width: 100%;
   }
 }
 
