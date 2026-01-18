@@ -1,6 +1,4 @@
-/* =========================
-   RESET
-========================= */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -8,25 +6,19 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-/* =========================
-   BODY
-========================= */
+/* BODY */
 body {
   background: #000;
   color: #fff;
   letter-spacing: 0.5px;
-  line-height: 1.6;
   background-image: linear-gradient(
     135deg,
     rgba(255,255,255,0.08),
-    rgba(255,255,255,0.03),
-    rgba(0,0,0,0)
+    rgba(255,255,255,0.02)
   );
 }
 
-/* =========================
-   CONTAINER
-========================= */
+/* CONTAINER */
 .container {
   width: 90%;
   max-width: 1100px;
@@ -34,9 +26,7 @@ body {
   text-align: center;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 header {
   padding: 90px 0;
 }
@@ -44,13 +34,11 @@ header {
 header h1 {
   font-size: 3rem;
   font-weight: 800;
-  letter-spacing: 4px;
-  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 header p {
-  margin: 20px 0 30px;
-  font-size: 1.1rem;
+  margin: 20px 0;
   opacity: 0.85;
 }
 
@@ -60,59 +48,27 @@ header p {
   display: block;
 }
 
-/* =========================
-   SECCIONES
-========================= */
+/* SECTIONS */
 section {
   padding: 80px 0;
-  position: relative;
 }
 
-section:nth-of-type(even) {
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,0.04),
-    rgba(0,0,0,0)
-  );
-}
-
-section::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: rgba(255,255,255,0.3);
-}
-
-/* =========================
-   TITULOS
-========================= */
-h2 {
-  font-size: 2.4rem;
-  font-weight: 800;
-  margin-bottom: 50px;
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
-/* =========================
-   BOTONES
-========================= */
+/* BUTTONS */
 .btn {
   display: inline-block;
-  padding: 14px 36px;
+  margin: 10px;
+  padding: 14px 34px;
   border: 2px solid #fff;
   color: #fff;
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   font-weight: 700;
   transition: all 0.3s ease;
-  margin: 5px;
-  border-radius: 30px;
 }
 
 .btn:hover {
@@ -120,21 +76,17 @@ h2 {
   color: #000;
 }
 
-/* WhatsApp */
 .whatsapp {
-  background: #25D366;
-  border-color: #25D366;
-  color: #000;
+  border-color: #25d366;
+  color: #25d366;
 }
 
 .whatsapp:hover {
-  background: #1ebe5d;
-  border-color: #1ebe5d;
+  background: #25d366;
+  color: #000;
 }
 
-/* =========================
-   CARDS
-========================= */
+/* CARDS */
 .cards {
   display: flex;
   gap: 30px;
@@ -145,8 +97,8 @@ h2 {
 .card {
   background: #111;
   padding: 30px 25px;
-  border-radius: 20px;
   width: 300px;
+  border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.08);
   transition: transform 0.3s ease;
 }
@@ -159,202 +111,71 @@ h2 {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 14px;
   margin-bottom: 15px;
 }
 
 .card h3 {
   font-size: 1.3rem;
   margin-bottom: 10px;
-  text-transform: uppercase;
 }
 
 .card p {
   font-size: 0.95rem;
   opacity: 0.85;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-/* =========================
-   PLANES
-========================= */
-.plan {
-  text-align: left;
-}
-
-.plan-desc {
-  font-size: 0.95rem;
-  margin-bottom: 20px;
-  opacity: 0.85;
-}
-
-.plan-list {
-  list-style: none;
-  margin-bottom: 25px;
-  padding: 0;
-}
-
-.plan-list li {
-  margin-bottom: 10px;
-  font-size: 0.95rem;
-}
-
-.destacado {
-  border: 2px solid #fff;
-  transform: scale(1.05);
-}
-
-.destacado:hover {
-  transform: scale(1.05) translateY(-10px);
-}
-
-/* =========================
-   MICRO ANIMACIONES
-========================= */
-section h2,
-section p,
-.card,
-.btn {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s ease forwards;
-}
-
-section h2 { animation-delay: 0.1s; }
-section p { animation-delay: 0.2s; }
-
-.card:nth-child(1) { animation-delay: 0.2s; }
-.card:nth-child(2) { animation-delay: 0.35s; }
-.card:nth-child(3) { animation-delay: 0.5s; }
-
-.btn { animation-delay: 0.6s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 footer {
   padding: 30px 0;
   font-size: 0.85rem;
   opacity: 0.6;
-  text-align: center;
 }
 
-/* =========================
-   MOBILE AGRESIVO
-========================= */
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 56px;
+  height: 56px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 28px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
-
-  body {
-    padding-bottom: 90px;
-    letter-spacing: 0.2px;
-  }
-
-  header {
-    padding: 60px 0 70px;
-  }
-
   header h1 {
-    font-size: 2.2rem;
-    letter-spacing: 2px;
-  }
-
-  header p {
-    font-size: 1rem;
-  }
-
-  .logo {
-    width: 60px;
+    font-size: 2.4rem;
   }
 
   section {
     padding: 60px 0;
   }
 
-  h2 {
-    font-size: 1.9rem;
-    margin-bottom: 30px;
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
   }
 
-  section p {
-    font-size: 0.95rem;
-    max-width: 90%;
-    margin: 0 auto 20px;
-  }
-
-  .btn {
-    width: 100%;
-    padding: 16px 0;
-    font-size: 0.95rem;
-  }
-
-  .cards {
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  .card {
-    width: 100%;
-    padding: 24px 20px;
-  }
-
-  .card img {
-    height: 165px;
-    border-radius: 12px;
-  }
-
-  .card p {
-    font-size: 0.9rem;
-  }
-
-  .destacado {
-    transform: none;
-    border-width: 3px;
-    background: linear-gradient(
-      135deg,
-      rgba(255,255,255,0.06),
-      rgba(0,0,0,0)
-    );
-  }
-
-  footer {
-    font-size: 0.75rem;
-    opacity: 0.5;
-  }
-}
-
-/* =========================
-   WHATSAPP FIJO MOBILE
-========================= */
-@media (max-width: 768px) {
-
-  .whatsapp-fixed {
-    position: fixed;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 30px);
-    max-width: 420px;
-    background: #25D366;
-    color: #000;
-    text-align: center;
-    padding: 16px 0;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    border-radius: 40px;
-    text-decoration: none;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-    z-index: 999;
-  }
-
-  .whatsapp-fixed:active {
-    transform: translateX(-50%) scale(0.97);
+  .whatsapp-float img {
+    width: 24px;
   }
 }
