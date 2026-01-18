@@ -301,4 +301,51 @@ section::after {
   height: 3px;
   background: rgba(255,255,255,0.3);
 }
+/* =========================
+   MICRO ANIMACIONES
+========================= */
+
+/* Estado inicial */
+section h2,
+section p,
+.card,
+.btn {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* Delays progresivos */
+section h2 {
+  animation-delay: 0.1s;
+}
+
+section p {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.35s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.btn {
+  animation-delay: 0.6s;
+}
+
+/* Animación */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
