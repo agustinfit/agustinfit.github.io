@@ -275,3 +275,30 @@ footer {
     transform: translateX(-50%) scale(0.97);
   }
 }
+/* =========================
+   SEPARADORES VISUALES
+========================= */
+
+section:nth-of-type(even) {
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.04),
+    rgba(0,0,0,0)
+  );
+}
+
+section {
+  position: relative;
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: rgba(255,255,255,0.3);
+}
+
