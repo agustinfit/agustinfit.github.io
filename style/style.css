@@ -11,6 +11,7 @@ body {
   line-height: 1.7;
 }
 
+/* CONTAINER */
 .container {
   width: 90%;
   max-width: 1100px;
@@ -18,19 +19,25 @@ body {
   text-align: center;
 }
 
+/* HERO AGRESIVO FITNESS */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: radial-gradient(circle at top, rgba(255,255,255,0.08), #000 70%);
+  background:
+    radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 60%),
+    radial-gradient(circle at top, rgba(255,255,255,0.12), #000 70%),
+    linear-gradient(180deg, #000 0%, #050505 100%);
 }
 
+/* LOGO */
 .logo {
   width: 170px;
   margin: 0 auto 40px;
   display: block;
 }
 
+/* HERO TEXT */
 .hero h1 {
   font-size: clamp(3rem, 6vw, 4.5rem);
   font-weight: 900;
@@ -44,14 +51,28 @@ body {
   margin-bottom: 40px;
 }
 
+/* SECTIONS */
 section {
   padding: 100px 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.03),
+      rgba(0,0,0,0.9)
+    );
 }
 
+/* DARK SECTIONS */
 section.dark {
-  background: #0b0b0b;
+  background:
+    linear-gradient(
+      180deg,
+      #050505,
+      #000
+    );
 }
 
+/* TITLES */
 h2 {
   font-size: 2.4rem;
   font-weight: 800;
@@ -64,6 +85,7 @@ h2 {
   margin-bottom: 15px;
 }
 
+/* BUTTONS */
 .btn {
   display: inline-block;
   padding: 16px 38px;
@@ -91,6 +113,7 @@ h2 {
   color: #000;
 }
 
+/* CARDS */
 .cards {
   display: flex;
   gap: 40px;
@@ -99,12 +122,13 @@ h2 {
 
 .card {
   width: 300px;
-  background: #111;
-  border: 1px solid rgba(255,255,255,0.1);
+  background: linear-gradient(180deg, #111, #0a0a0a);
+  border: 1px solid rgba(255,255,255,0.12);
   padding: 40px 25px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
 }
 
+/* IMÁGENES CIRCULARES */
 .service-img {
   width: 120px;
   height: 120px;
@@ -125,6 +149,7 @@ h2 {
   opacity: 0.85;
 }
 
+/* PLANES */
 .features {
   margin: 20px 0 30px;
 }
@@ -143,12 +168,14 @@ h2 {
   color: #000;
 }
 
+/* FOOTER */
 footer {
   padding: 40px 0;
   font-size: 0.8rem;
   opacity: 0.6;
 }
 
+/* WHATSAPP FLOAT */
 .whatsapp-float {
   position: fixed;
   bottom: 22px;
@@ -166,6 +193,7 @@ footer {
   z-index: 1000;
 }
 
+/* SLIDER */
 .slider {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -174,7 +202,6 @@ footer {
 .slider-track {
   display: flex;
   gap: 40px;
-  scroll-snap-align: start;
 }
 
 .slide {
@@ -182,6 +209,7 @@ footer {
   flex-shrink: 0;
 }
 
+/* DOTS */
 .dots {
   margin-top: 20px;
 }
@@ -195,6 +223,7 @@ footer {
   margin: 0 4px;
 }
 
+/* REVEAL */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -208,6 +237,7 @@ footer {
   }
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
   .cards {
     width: max-content;
