@@ -19,7 +19,7 @@ body {
   text-align: center;
 }
 
-/* HERO – AGRESIVO FITNESS */
+/* HERO CON IMAGEN */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -27,25 +27,25 @@ body {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 60%),
-    radial-gradient(circle at top, rgba(255,255,255,0.12), #000 70%),
-    linear-gradient(180deg, #000 0%, #050505 100%);
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.95)),
+    url("../images/hero-bg.jpg") center/cover no-repeat;
 }
 
-/* TEXTURA (GRANO) */
+/* TEXTURA */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image: repeating-radial-gradient(
     circle,
-    rgba(255,255,255,0.03) 0,
-    rgba(255,255,255,0.03) 1px,
+    rgba(255,255,255,0.04) 0,
+    rgba(255,255,255,0.04) 1px,
     transparent 1px,
     transparent 3px
   );
-  opacity: 0.15;
+  opacity: 0.18;
   pointer-events: none;
+  animation: grainMove 8s linear infinite;
 }
 
 /* DIAGONAL HERO */
@@ -58,6 +58,7 @@ body {
   height: 240px;
   background: #000;
   transform: skewY(-5deg);
+  animation: diagonalMove 12s ease-in-out infinite alternate;
 }
 
 /* LOGO */
@@ -112,6 +113,7 @@ section::before {
   height: 120px;
   background: #000;
   transform: skewY(-4deg);
+  animation: diagonalMove 14s ease-in-out infinite alternate;
 }
 
 /* DARK SECTIONS */
@@ -180,7 +182,7 @@ h2 {
   box-shadow: 0 14px 50px rgba(0,0,0,0.7);
 }
 
-/* IMÁGENES CIRCULARES */
+/* IMÁGENES */
 .service-img {
   width: 120px;
   height: 120px;
@@ -276,17 +278,22 @@ footer {
   margin: 0 4px;
 }
 
-/* REVEAL */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: reveal 0.8s ease forwards;
+/* ANIMACIONES */
+@keyframes diagonalMove {
+  from {
+    transform: skewY(-4deg) translateY(0);
+  }
+  to {
+    transform: skewY(-5deg) translateY(15px);
+  }
 }
 
-@keyframes reveal {
+@keyframes grainMove {
+  from {
+    transform: translate(0, 0);
+  }
   to {
-    opacity: 1;
-    transform: none;
+    transform: translate(-20px, -20px);
   }
 }
 
