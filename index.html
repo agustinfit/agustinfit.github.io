@@ -1,53 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Agustin Fit | Entrenamiento Personal</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Entrenamiento personal online y presencial. Fuerza, salud y rendimiento deportivo con Agustin Fit.">
-  <meta name="keywords" content="personal trainer, entrenamiento personal, fuerza, salud, fitness">
-  <meta name="author" content="Agustin Fit">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style/style.css">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-<!-- HERO -->
-<header class="hero section-reveal">
-  <div class="container">
-    <img src="images/logo.png" alt="Agustin Fit Logo" class="logo">
-    <h1 class="reveal-title">ENTRENÁ<br>CON MÉTODO</h1>
-    <p class="reveal-item">
-      Fuerza. Salud. Rendimiento.<br>
-      Entrenamiento personalizado para personas reales.
-    </p>
-    <a class="btn whatsapp reveal-item" href="https://wa.me/5493513276853" target="_blank">
-      Quiero empezar
-    </a>
-  </div>
-</header>
-
-<!-- QUIÉN SOY -->
-<section class="dark section-reveal">
-  <div class="container">
-    <h2 class="reveal-title">Quién soy</h2>
-    <p class="lead reveal-item">
-      Soy Agustín, personal trainer y técnico superior en actividad física.
-    </p>
-    <p class="reveal-item">
-      Trabajo con personas que quieren mejorar su fuerza, su resistencia
-      y su calidad de vida, sin importar la edad ni el nivel.
-    </p>
-  </div>
-</section>
-
 <!-- SERVICIOS -->
 <section class="section-reveal services">
   <h2 class="reveal-title">Servicios</h2>
@@ -59,19 +9,19 @@
   </div>
 
   <div class="services-scroll slider">
-    <div class="card reveal-item">
+    <div class="card">
       <img src="images/personal.jpg" class="service-img">
       <h3>Fuerza y Salud</h3>
       <p>Programas progresivos para ganar fuerza y cuidar la salud.</p>
     </div>
 
-    <div class="card reveal-item">
+    <div class="card">
       <img src="images/online.jpg" class="service-img">
       <h3>Resistencia</h3>
       <p>Entrenamientos para mejorar energía y capacidad aeróbica.</p>
     </div>
 
-    <div class="card reveal-item">
+    <div class="card">
       <img src="images/funcional2.jpg" class="service-img">
       <h3>Rendimiento Deportivo</h3>
       <p>Preparación física específica y prevención de lesiones.</p>
@@ -90,8 +40,7 @@
   </div>
 
   <div class="plans-scroll slider">
-
-    <div class="card reveal-item">
+    <div class="card">
       <h3>Plan Inicial</h3>
       <p>Ideal si estás empezando.</p>
       <p class="features">
@@ -102,7 +51,7 @@
       <a class="btn whatsapp" href="https://wa.me/5493513276853" target="_blank">Consultar</a>
     </div>
 
-    <div class="card featured reveal-item">
+    <div class="card featured">
       <span class="badge">Más elegido</span>
       <h3>Plan Pro</h3>
       <p>El plan más completo.</p>
@@ -114,7 +63,7 @@
       <a class="btn whatsapp" href="https://wa.me/5493513276853" target="_blank">Quiero este plan</a>
     </div>
 
-    <div class="card reveal-item">
+    <div class="card">
       <h3>Plan Rendimiento</h3>
       <p>Objetivos deportivos específicos.</p>
       <p class="features">
@@ -124,57 +73,7 @@
       </p>
       <a class="btn whatsapp" href="https://wa.me/5493513276853" target="_blank">Consultar</a>
     </div>
-
   </div>
 </section>
 
-<!-- CONTACTO -->
-<section class="section-reveal">
-  <div class="container">
-    <h2 class="reveal-title">Contacto</h2>
-    <p class="lead reveal-item">Escribime y vemos el mejor plan para vos.</p>
-    <a class="btn whatsapp reveal-item" href="https://wa.me/5493513276853" target="_blank">WhatsApp</a>
-    <a class="btn reveal-item" href="https://instagram.com/agustin.fitt" target="_blank">Instagram</a>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Agustin Fit. Todos los derechos reservados.</p>
-</footer>
-
-<a href="https://wa.me/5493513276853" class="whatsapp-float" target="_blank"><span>W</span></a>
-
-<!-- JS -->
-<script>
-  // Reveal por sección
-  const sections = document.querySelectorAll('.section-reveal');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-  sections.forEach(s => observer.observe(s));
-
-  // Slider indicators
-  function activateDots(sliderSelector, indicatorSelector) {
-    const slider = document.querySelector(sliderSelector);
-    const dots = document.querySelectorAll(indicatorSelector + ' span');
-    const cards = slider.children;
-
-    slider.addEventListener('scroll', () => {
-      const index = Math.round(slider.scrollLeft / cards[0].offsetWidth);
-      dots.forEach(dot => dot.classList.remove('active'));
-      if (dots[index]) dots[index].classList.add('active');
-    });
-  }
-
-  activateDots('.services-scroll', '.services-indicator');
-  activateDots('.plans-scroll', '.plans-indicator');
-</script>
-
-</body>
-</html>
 
