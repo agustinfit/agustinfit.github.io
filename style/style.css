@@ -1,4 +1,6 @@
-/* RESET */
+/* ===========================
+   RESET
+   =========================== */
 * {
   margin: 0;
   padding: 0;
@@ -6,14 +8,18 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-/* BASE */
+/* ===========================
+   BASE
+   =========================== */
 body {
   background: #000;
   color: #fff;
   line-height: 1.7;
 }
 
-/* CONTAINER */
+/* ===========================
+   CONTAINER
+   =========================== */
 .container {
   width: 90%;
   max-width: 1100px;
@@ -21,24 +27,30 @@ body {
   text-align: center;
 }
 
-/* HERO */
+/* ===========================
+   HERO
+   =========================== */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   background:
-    radial-gradient(circle at top, rgba(255,255,255,0.08), #000 70%),
-    linear-gradient(180deg, rgba(37,211,102,0.12), transparent 60%);
+    radial-gradient(circle at top, rgba(255,255,255,0.1), #000 70%),
+    linear-gradient(180deg, #000 0%, #050505 100%);
 }
 
-/* LOGO */
+/* ===========================
+   LOGO
+   =========================== */
 .logo {
   width: 170px;
   margin: 0 auto 40px;
   display: block;
 }
 
-/* HERO TEXT */
+/* ===========================
+   HERO TEXT
+   =========================== */
 .hero h1 {
   font-size: clamp(3rem, 6vw, 4.5rem);
   font-weight: 900;
@@ -52,7 +64,9 @@ body {
   margin-bottom: 40px;
 }
 
-/* SECTIONS */
+/* ===========================
+   SECTIONS
+   =========================== */
 section {
   padding: 100px 0;
 }
@@ -61,7 +75,6 @@ section.dark {
   background: #0b0b0b;
 }
 
-/* TITLES */
 h2 {
   font-size: 2.4rem;
   font-weight: 800;
@@ -74,7 +87,9 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* BUTTONS */
+/* ===========================
+   BUTTONS
+   =========================== */
 .btn {
   display: inline-block;
   padding: 16px 38px;
@@ -102,18 +117,19 @@ h2 {
   color: #000;
 }
 
-/* SLIDER */
+/* ===========================
+   SLIDER BASE (MOBILE)
+   =========================== */
 .slider {
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
 }
 
 .cards {
   display: flex;
-  gap: 40px;
-  padding-bottom: 20px;
-  justify-content: center;
+  gap: 20px;
+  padding-bottom: 15px;
 }
 
 .card {
@@ -121,25 +137,40 @@ h2 {
   background: #111;
   border: 1px solid rgba(255,255,255,0.1);
   padding: 40px 25px;
+  transition: 0.3s;
   scroll-snap-align: center;
-  transition: transform 0.3s;
 }
 
 .card:hover {
   transform: translateY(-10px);
 }
 
-/* SERVICE IMAGE */
+/* ===========================
+   SERVICE IMAGES
+   =========================== */
 .service-img {
   width: 120px;
   height: 120px;
   object-fit: cover;
   border-radius: 50%;
+  display: block;
   margin: 0 auto 20px;
   border: 3px solid rgba(255,255,255,0.2);
 }
 
-/* PLAN */
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* ===========================
+   PLANES
+   =========================== */
 .features {
   margin: 20px 0 30px;
 }
@@ -148,40 +179,50 @@ h2 {
   border: 2px solid #25d366;
 }
 
-/* BADGE */
 .badge {
   display: inline-block;
   margin-bottom: 15px;
   padding: 6px 14px;
   font-size: 0.75rem;
   font-weight: 800;
+  letter-spacing: 1px;
   background: #25d366;
   color: #000;
 }
 
-/* DOTS */
+/* ===========================
+   DOTS (INDICADORES MOBILE)
+   =========================== */
 .dots {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .dots span {
   width: 8px;
   height: 8px;
-  background: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.3);
   border-radius: 50%;
 }
 
-/* FOOTER */
+.dots span.active {
+  background: #25d366;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
 footer {
   padding: 40px 0;
   font-size: 0.8rem;
   opacity: 0.6;
 }
 
-/* WHATSAPP FLOAT */
+/* ===========================
+   WHATSAPP FLOAT
+   =========================== */
 .whatsapp-float {
   position: fixed;
   bottom: 22px;
@@ -199,24 +240,42 @@ footer {
   z-index: 1000;
 }
 
-/* MOBILE */
+/* ===========================
+   DESKTOP FIX DEFINITIVO
+   =========================== */
+@media (min-width: 1024px) {
+
+  .slider {
+    overflow: visible;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-bottom: 0;
+  }
+
+  .card {
+    min-width: 0;
+  }
+
+  .dots {
+    display: none;
+  }
+}
+
+/* ===========================
+   MOBILE ADJUST
+   =========================== */
 @media (max-width: 768px) {
+
   .logo {
     width: 150px;
   }
 
   section {
     padding: 80px 0;
-  }
-}
-/* DESKTOP: mostrar todos los cards */
-@media (min-width: 1024px) {
-  .slider {
-    overflow: visible;
-  }
-
-  .cards {
-    justify-content: center;
   }
 }
 
