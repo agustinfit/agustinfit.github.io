@@ -1,14 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agustin Fit | Entrenamiento Personal</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Entrenamiento personal online y presencial. Fuerza, salud y rendimiento deportivo con Agustin Fit.">
+  <meta name="keywords" content="personal trainer, entrenamiento personal, fuerza, salud, fitness">
+  <meta name="author" content="Agustin Fit">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style/style.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HERO -->
+<header class="hero section-reveal">
+  <div class="container">
+    <img src="images/logo.png" alt="Agustin Fit Logo" class="logo">
+    <h1 class="reveal-title">ENTRENÁ<br>CON MÉTODO</h1>
+    <p class="reveal-item">
+      Fuerza. Salud. Rendimiento.<br>
+      Entrenamiento personalizado para personas reales.
+    </p>
+    <a class="btn whatsapp reveal-item" href="https://wa.me/5493513276853" target="_blank">
+      Quiero empezar
+    </a>
+  </div>
+</header>
+
+<!-- QUIÉN SOY -->
+<section class="dark section-reveal">
+  <div class="container">
+    <h2 class="reveal-title">Quién soy</h2>
+    <p class="lead reveal-item">
+      Soy Agustín, personal trainer y técnico superior en actividad física.
+    </p>
+    <p class="reveal-item">
+      Trabajo con personas que quieren mejorar su fuerza, su resistencia
+      y su calidad de vida, sin importar la edad ni el nivel.
+      El entrenamiento se adapta a vos, no vos al entrenamiento.
+    </p>
+  </div>
+</section>
+
 <!-- SERVICIOS -->
-<section class="section-reveal services">
+<section class="section-reveal">
   <h2 class="reveal-title">Servicios</h2>
 
-  <div class="services-indicator">
+  <div class="indicator services-indicator">
     <span class="active"></span>
     <span></span>
     <span></span>
   </div>
 
-  <div class="services-scroll slider">
+  <div class="slider services-scroll">
     <div class="card">
       <img src="images/personal.jpg" class="service-img">
       <h3>Fuerza y Salud</h3>
@@ -30,23 +81,23 @@
 </section>
 
 <!-- PLANES -->
-<section class="dark section-reveal plans">
+<section class="dark section-reveal">
   <h2 class="reveal-title">Planes</h2>
 
-  <div class="plans-indicator">
+  <div class="indicator plans-indicator">
     <span class="active"></span>
     <span></span>
     <span></span>
   </div>
 
-  <div class="plans-scroll slider">
+  <div class="slider plans-scroll">
     <div class="card">
       <h3>Plan Inicial</h3>
       <p>Ideal si estás empezando.</p>
       <p class="features">
         • Evaluación inicial<br>
         • Plan personalizado<br>
-        • Acompañamiento
+        • Acompañamiento continuo
       </p>
       <a class="btn whatsapp" href="https://wa.me/5493513276853" target="_blank">Consultar</a>
     </div>
@@ -69,11 +120,66 @@
       <p class="features">
         • Preparación física<br>
         • Prevención de lesiones<br>
-        • Optimización
+        • Optimización del rendimiento
       </p>
       <a class="btn whatsapp" href="https://wa.me/5493513276853" target="_blank">Consultar</a>
     </div>
   </div>
 </section>
+
+<!-- CONTACTO -->
+<section class="section-reveal">
+  <div class="container">
+    <h2 class="reveal-title">Contacto</h2>
+    <p class="lead reveal-item">
+      Escribime y vemos juntos cuál es el mejor plan para vos.
+    </p>
+    <a class="btn whatsapp reveal-item" href="https://wa.me/5493513276853" target="_blank">WhatsApp</a>
+    <a class="btn reveal-item" href="https://instagram.com/agustin.fitt" target="_blank">Instagram</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Agustin Fit. Todos los derechos reservados.</p>
+</footer>
+
+<a href="https://wa.me/5493513276853" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <span>W</span>
+</a>
+
+<!-- JS -->
+<script>
+  // Animaciones por sección
+  const sections = document.querySelectorAll('.section-reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  sections.forEach(section => observer.observe(section));
+
+  // Indicadores activos según scroll
+  function sliderDots(sliderClass, indicatorClass) {
+    const slider = document.querySelector(sliderClass);
+    const dots = document.querySelectorAll(indicatorClass + ' span');
+    const cards = slider.children;
+
+    slider.addEventListener('scroll', () => {
+      const index = Math.round(slider.scrollLeft / cards[0].offsetWidth);
+      dots.forEach(dot => dot.classList.remove('active'));
+      if (dots[index]) dots[index].classList.add('active');
+    });
+  }
+
+  sliderDots('.services-scroll', '.services-indicator');
+  sliderDots('.plans-scroll', '.plans-indicator');
+</script>
+
+</body>
+</html>
+
 
 
