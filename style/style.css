@@ -209,4 +209,15 @@ footer {
     padding: 80px 0;
   }
 }
+/* DESKTOP: mostrar todos los cards */
+@media (min-width: 1024px) {
+  .slider {
+    overflow: visible;
+  }
+
+  .cards {
+    justify-content: center;
+  }
+}
+
 
